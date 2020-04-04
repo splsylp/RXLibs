@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YHCConfCurrentViewController">
+            <connections>
+                <outlet property="tableView" destination="eIB-sb-a9V" id="9kw-zq-fhZ"/>
+                <outlet property="topBtnBottomLayout" destination="yZA-Ye-eQD" id="5CV-ba-RHI"/>
+                <outlet property="topBtnRightLayout" destination="ev8-4h-CrH" id="mCo-4P-vxQ"/>
+                <outlet property="topBtnTopLayout" destination="Jd2-32-sUo" id="gWY-uf-iog"/>
+                <outlet property="topBtnWidthLayout" destination="Jwb-g0-0Sm" id="mYA-Kp-1MO"/>
+                <outlet property="topJoinbtn" destination="e69-xl-Qen" id="j55-QO-aXT"/>
+                <outlet property="topStartBtn" destination="9ak-3y-R6t" id="HpN-tf-Mj9"/>
+                <outlet property="topStartBtnTopLayout" destination="0we-uN-EDO" id="AYX-NO-SSj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-3y-R6t">
+                    <rect key="frame" x="36.5" y="14" width="164" height="113.5"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="20"/>
+                    <state key="normal" backgroundImage="yhc_conflist_start_full.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startConfAction:" destination="-1" eventType="touchUpInside" id="zG6-KJ-5BA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e69-xl-Qen">
+                    <rect key="frame" x="205" y="14" width="164" height="113.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="e69-xl-Qen" secondAttribute="height" multiplier="181:125" id="02x-Xe-hly"/>
+                        <constraint firstAttribute="width" constant="164" id="Jwb-g0-0Sm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="20"/>
+                    <state key="normal" title="加入会议" backgroundImage="yhc_conflist_join_full.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="joinConfAction:" destination="-1" eventType="touchUpInside" id="sZw-CL-kM8"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-sb-a9V" customClass="YHCBaseTableView">
+                    <rect key="frame" x="0.0" y="141.5" width="375" height="525.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8lP-SR-OIu"/>
+                        <outlet property="delegate" destination="-1" id="jFK-ki-aFK"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.88627450980392153" green="0.90588235294117647" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9ak-3y-R6t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="0we-uN-EDO"/>
+                <constraint firstAttribute="bottom" secondItem="eIB-sb-a9V" secondAttribute="bottom" id="Edr-EO-NY9"/>
+                <constraint firstItem="e69-xl-Qen" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="Jd2-32-sUo"/>
+                <constraint firstItem="e69-xl-Qen" firstAttribute="leading" secondItem="9ak-3y-R6t" secondAttribute="trailing" constant="4.5" id="PZp-T2-1fO"/>
+                <constraint firstItem="e69-xl-Qen" firstAttribute="width" secondItem="9ak-3y-R6t" secondAttribute="width" id="Zo4-tO-0S6"/>
+                <constraint firstAttribute="trailing" secondItem="eIB-sb-a9V" secondAttribute="trailing" id="cRy-62-kSl"/>
+                <constraint firstItem="e69-xl-Qen" firstAttribute="height" secondItem="9ak-3y-R6t" secondAttribute="height" id="dDA-oP-iJv"/>
+                <constraint firstAttribute="trailing" secondItem="e69-xl-Qen" secondAttribute="trailing" constant="6" id="ev8-4h-CrH"/>
+                <constraint firstItem="eIB-sb-a9V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l2O-DX-CRg"/>
+                <constraint firstItem="eIB-sb-a9V" firstAttribute="top" secondItem="e69-xl-Qen" secondAttribute="bottom" constant="14" id="yZA-Ye-eQD"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="yhc_conflist_join_full.png" width="180" height="125"/>
+        <image name="yhc_conflist_start_full.png" width="180" height="125"/>
+    </resources>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="27d-oE-l7l" customClass="DocumentConView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxf-jA-8jS">
+                    <rect key="frame" x="40" y="10" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="G8K-Xj-5wl"/>
+                        <constraint firstAttribute="width" constant="26" id="z9h-ws-LmM"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="board.png"/>
+                    <connections>
+                        <action selector="documentButtonClick:" destination="27d-oE-l7l" eventType="touchUpInside" id="ST1-d8-gwj"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-Xb-0tk">
+                    <rect key="frame" x="40" y="38" width="26" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dvZ-e5-JWV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2U-OQ-lXL">
+                    <rect key="frame" x="280" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="NnZ-NS-GHl"/>
+                        <constraint firstAttribute="width" constant="40" id="bDi-Fa-VKY"/>
+                    </constraints>
+                    <state key="normal" image="up.png"/>
+                    <state key="highlighted" image="up_highLight.png"/>
+                    <connections>
+                        <action selector="documentButtonClick:" destination="27d-oE-l7l" eventType="touchUpInside" id="18a-ep-GQr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="492-dz-IPm">
+                    <rect key="frame" x="275" y="38" width="50" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="97G-Xy-4S3"/>
+                        <constraint firstAttribute="height" constant="20" id="XFn-yL-828"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zWh-me-aAb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="zWh-me-aAb"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="492-dz-IPm" firstAttribute="top" secondItem="Ane-Xb-0tk" secondAttribute="top" id="AEv-4t-lfF"/>
+                <constraint firstItem="492-dz-IPm" firstAttribute="centerX" secondItem="27d-oE-l7l" secondAttribute="centerX" id="Ia5-Bg-wk2"/>
+                <constraint firstItem="492-dz-IPm" firstAttribute="top" secondItem="b2U-OQ-lXL" secondAttribute="bottom" constant="-2" id="NYn-kw-Qej"/>
+                <constraint firstAttribute="bottom" secondItem="Ane-Xb-0tk" secondAttribute="bottom" constant="2" id="Om5-im-eoa"/>
+                <constraint firstItem="492-dz-IPm" firstAttribute="top" secondItem="Ane-Xb-0tk" secondAttribute="top" id="UvB-8b-Oah"/>
+                <constraint firstItem="hxf-jA-8jS" firstAttribute="top" secondItem="27d-oE-l7l" secondAttribute="top" constant="10" id="gzw-4v-By3"/>
+                <constraint firstItem="b2U-OQ-lXL" firstAttribute="top" secondItem="27d-oE-l7l" secondAttribute="top" id="jCq-5p-Uny"/>
+                <constraint firstItem="b2U-OQ-lXL" firstAttribute="centerX" secondItem="27d-oE-l7l" secondAttribute="centerX" id="o4P-tO-BJt"/>
+                <constraint firstItem="hxf-jA-8jS" firstAttribute="leading" secondItem="27d-oE-l7l" secondAttribute="leading" constant="40" id="oNY-Ae-8Cx"/>
+                <constraint firstItem="Ane-Xb-0tk" firstAttribute="leading" secondItem="hxf-jA-8jS" secondAttribute="leading" id="r4f-gI-Wiy"/>
+                <constraint firstItem="Ane-Xb-0tk" firstAttribute="width" secondItem="hxf-jA-8jS" secondAttribute="width" id="wEF-C4-oDx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AEv-4t-lfF"/>
+                    <exclude reference="UvB-8b-Oah"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="boardBtn" destination="hxf-jA-8jS" id="Rc2-uY-Id3"/>
+                <outlet property="documentSelBtn" destination="b2U-OQ-lXL" id="tAP-oc-ho0"/>
+            </connections>
+            <point key="canvasLocation" x="448" y="251"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="board.png" width="40" height="40"/>
+        <image name="up.png" width="20" height="20"/>
+        <image name="up_highLight.png" width="20" height="20"/>
+    </resources>
+</document>
