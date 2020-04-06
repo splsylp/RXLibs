@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RXLibs"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "YunTongXun Libs"
   #s.description  = ""
 
@@ -10,11 +10,13 @@ Pod::Spec.new do |s|
   s.author       = { "Tony" => "961505161@qq.com" }
 
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/splsylp/RXLibs.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/splsylp/RXLibs.git", :tag => "0.0.3" }
 
   s.source_files = "Yuntx/IMHeaders/*.h"
   
   s.resource     = "Yuntx/IMResource/*"
+  
+  s.vendored_libraries = "Yuntx/IMLibs/libAppModel.a", "Yuntx/libBaseComponent.a", "Yuntx/libChat.a", "Yuntx/libCommon.a"
 
   s.frameworks   = "VideoToolbox", "MessageUI", "CoreTelephony", "CoreGraphics", "CoreFoundation", "AVFoundation", "AudioToolbox"
 
