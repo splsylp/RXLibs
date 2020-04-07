@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   
   s.resource     = "Yuntx/IMResource/*"
   
-  s.vendored_libraries = "Yuntx/IMLibs/libAppModel.a", "Yuntx/libBaseComponent.a", "Yuntx/libChat.a", "Yuntx/libCommon.a"
+  s.vendored_libraries = "Yuntx/IMLibs/libAppModel.a", "Yuntx/IMLibs/libBaseComponent.a", "Yuntx/IMLibs/libChat.a", "Yuntx/IMLibs/libCommon.a"
 
   s.frameworks   = "VideoToolbox", "MessageUI", "CoreTelephony", "CoreGraphics", "CoreFoundation", "AVFoundation", "AudioToolbox"
 
